@@ -2,11 +2,14 @@
 
 int main()
 {
+    //Declaring variables and matrice :-
+    
     int matrix1[10][10];
     int matrix2[10][10];
     int matrix3[10][10];
     int r1, c1, r2, c2;
-    // int sum = 0;
+    
+    //Asking user to input no. of rows and columns for both matrices :-
 
     printf("\n\n***Matrix Multiplication Program***\n\n");
 
@@ -23,9 +26,13 @@ int main()
 
     printf("Enter the no. of columns of Matrix B :");
     scanf("%d", &c2);
+    
+    //Used conditional statement to operate correct order of matrices :-
 
     if (c1 == r2)
     {
+        //taking inputs for Matrix A :-
+        
         for (int i = 0; i < r1; i++)
         {
             for (int j = 0; j < c1; j++)
@@ -34,6 +41,8 @@ int main()
                 scanf("%d", &matrix1[i][j]);
             }
         }
+        
+        //taking inputs for Matrix B :-
 
         for (int i = 0; i < r2; i++)
         {
@@ -43,6 +52,8 @@ int main()
                 scanf("%d", &matrix2[i][j]);
             }
         }
+        
+        //printing matrices to show the inputted values :-
 
         printf("\n\nMatrices are :\n");
 
@@ -67,23 +78,8 @@ int main()
             }
             printf("\n");
         }
-
-        // for (int i = 0; i < 3; i++)
-        // {
-        //     for (int j = 0; j < 3; j++)
-        //     {
-
-        //         for (int k = 0; k < 3; j++)
-        //         {
-
-        //         sum += matrix1[i][j]*matrix2[j][k];
-
-        //         }
-
-        //         matrix3[i][j]=sum;
-        //         sum=0;
-        //     }
-        // }
+        
+        //Multiplying the both Matrices :-
 
         for (int i = 0; i < r1; i++)
         {
@@ -96,6 +92,8 @@ int main()
                 }
             }
         }
+       
+        //Printing Results :-
 
         printf("Matrix Multiplication is:\n");
 
